@@ -55,7 +55,7 @@ ScrollReveal().reveal('.home-container h1, .about-container', { origin: 'right' 
 /* Adding a TYping feature from typed.js*/
 const typed = new Typed('.multiple-text', {
     strings: ['Data Analyst', 'Technical Writer', 'Frontend Developer'],
-    typeSpeed: 100,
+    typeSpeed: 1000,
     backSpeed: 100,
     delaySpeed: 100,
     loop: true

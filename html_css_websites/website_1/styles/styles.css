@@ -18,31 +18,56 @@
   padding: 12px;
 }
 
-nav li {
-  list-style-type: none;
-}
-
 .home-elexar {
   background-color: #43766C;
   display: flex;
   justify-content: space-between;
   padding: 15px 20px;
   color: #fff;
-  list-style-type: none;
-  height: 300pc;
 }
 
 section a {
   color: #fff;
   text-decoration: none;
   font-size: 30px;
+  background-color: brown;
 }
 
 section div a {
   color: #fff;
   text-decoration: none;
-  padding: 10px;
   font-size: 20px;
+}
+
+.hero-container {
+  display: flex;
+  justify-content: space-between;
+  background-color: chartreuse;
+  color: #43766C;
+}
+
+.hero-container .hero-desc {
+  background-color: red;
+  width: 50%;
+  padding: 30px 40px;
+  color: #000;
+}
+
+.hero-container .hero-desc h3 {
+  font-size: 40px;
+  padding-top: 25px;
+}
+
+.hero-container .hero-desc p {
+  padding-top: 18px;
+}
+
+.hero-container .hero-desc button {
+  margin-top: 10px;
+}
+
+.hero-container .hero-img {
+  background-color: blueviolet;
 }
 
 .about-us {

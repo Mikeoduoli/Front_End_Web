@@ -1,0 +1,111 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    // background-color: bisque;
+}
+
+// .contact-header {
+//     display: inline-block;
+//     background-color: black;
+//     // height: 10px;
+//     max-width: 100%;
+//     z-index: 1;
+// }
+
+
+.header {
+    background-color: black;
+    top: 0;
+    left: 0;
+    height: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    color: white;
+    padding: 12px;
+}
+
+nav li {
+    // display: inline-block;
+    list-style-type: none;
+}
+
+// home-elexar
+
+.home-elexar {
+    background-color: #43766C;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px;
+    color: #fff;
+    list-style-type: none;
+    height: 300pc;
+}
+
+// Logo styling
+
+section a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 30px;
+}
+
+section div a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 20px;
+}
+
+
+
+// about-us section
+.about-us {
+    background-color: #6C5F5B;
+}
+
+
+
+
+// services section
+
+.services {
+    background-color: #AC87C5;
+}
+
+
+
+//client-say
+
+.client-say {
+    background-color: #F5CCA0;
+}
+
+
+
+// send-message
+.send-message {
+    background-color: #424769;
+}
+
+
+
+
+// reach-out section
+.reach-out {
+    background-color: #294B29;
+}
+
+
+// footer section
+.footer {
+    background-color: dodgerblue;
+}
+
+
+
+
+// 

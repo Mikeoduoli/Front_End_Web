@@ -49,3 +49,8 @@
   color: #f1356d;
   margin-bottom: 8px;
 }
+
+.title {
+  text-align: center;
+  padding-top: 20px;
+}

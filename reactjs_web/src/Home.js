@@ -38,7 +38,7 @@ const Home = () => {
             {/* Working with Props */}
             <BlogList blogs={blogs} title="Our Blogs"/>
             {/* Reusing React Components */}
-            <BlogList blogs={blogs.filter((blog) => blog.author === "mario")} title="Our Blogs"/>
+            <BlogList blogs={blogs.filter((blog) => blog.author === "mario")} title="Mario's Blogs"/>
 
 
 

@@ -8,10 +8,10 @@ function App() {
   return (
     <div className="App">
       <Navbar />
+      <h1 className='title'>{title}</h1>
       <div className='content'>
         <Home />
         {/* Dynamic value */}
-        <h1>{title}</h1>
       </div>
     </div>
   );

@@ -1,15 +1,61 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import BlogList from "./BlogList";
 
 const Home = () => {
 
     //Outputting Lists
-    const [blogs, setBlogs] = useState([
-        { title: 'My new website', body: 'lorem ipsum...', author: 'mario', id: 1 },
-        { title: 'Welcome party!', body: 'lorem ipsum...', author: 'yoshi', id: 2 },
-        { title: 'Web dev top tips', body: 'lorem ipsum...', author: 'mario', id: 3 }
-    ])
+    const [blogs, setBlogs] = useState(null
 
+
+        // [
+        //     { title: 'My new website', body: 'lorem ipsum...', author: 'Julia', id: 1 },
+        //     { title: 'Welcome party!', body: 'lorem ipsum...', author: 'Jake', id: 2 },
+        //     { title: 'Web dev top tips', body: 'lorem ipsum...', author: 'Pendo', id: 3 }
+        // ]
+
+    );
+
+    // Displaying a loading message
+    const [isPending, setIsPending] = useState(true);
+
+    const[name, setName] = useState("Julia");
+
+
+
+
+
+    // ---------------
+    // Deleted this function in Lecture #17
+    // interact with the data directly and pass this function as a prop
+    // use setBlogs to change the state of id
+    // const handleDelete = (id) => {
+    //     const newBlogs = blogs.filter(blog => blog.id !== id);
+    //     setBlogs(newBlogs)
+    // }
+
+    // -------------
+
+    useEffect(() => {
+        // Our get request and timeout effect of 1000
+        setTimeout(() => {
+            fetch('http://localhost:8000/blogs') 
+        // A promise with a response object
+            .then(res => {
+                return res.json();
+            })
+            .then(data => {
+                setBlogs(data)
+                setIsPending(false)
+            })
+        }, 1000)
+
+
+        // console.log('use effect ran')
+        // console.log(blogs);
+        console.log(name);
+    }, []
+    // [name]
+    );
 
 
     // let name = 'Julia';
@@ -36,9 +82,16 @@ const Home = () => {
     return ( 
         <div className="home">
             {/* Working with Props */}
-            <BlogList blogs={blogs} title="Our Blogs"/>
+            {/* handleDelete is passed as a prop */}
+            {/* <BlogList blogs={blogs} title="Our Blogs" handleDelete={handleDelete}/> */}
+            {/* <button onClick={() => setName("Obed")}>Change Name</button> */}
+            {/* <h3>{ name }</h3> */}
+            
             {/* Reusing React Components */}
-            <BlogList blogs={blogs.filter((blog) => blog.author === "mario")} title="Mario's Blogs"/>
+            { isPending && <div>loading...</div>}
+            { blogs && <BlogList blogs={blogs.filter((blog) => blog.author === "mario")} title="Julia's Blogs" 
+            // handleDelete={handleDelete} (For Now it is not needed)
+            />}
 
 
 

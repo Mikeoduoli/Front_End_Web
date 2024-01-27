@@ -1,10 +1,14 @@
-import { useState, useEffect } from "react";
 import BlogList from "./BlogList";
+import useFetch from "./useFetch";
 
 const Home = () => {
 
+    //#20 Renaming data to blogs in this file
+    const { data : blogs, isPending, error} = useFetch('http://localhost:8000/blogs');
+
+    // #20 Also this one moved to a custom hook
     //Outputting Lists
-    const [blogs, setBlogs] = useState(null
+    // const [blogs, setBlogs] = useState(null
 
 
         // [
@@ -13,12 +17,14 @@ const Home = () => {
         //     { title: 'Web dev top tips', body: 'lorem ipsum...', author: 'Pendo', id: 3 }
         // ]
 
-    );
+    // );
 
+    // #20 Moving this section to a custom hook file(useFetch.js)
     // Displaying a loading message
-    const [isPending, setIsPending] = useState(true);
+    // const [isPending, setIsPending] = useState(true);
+    // const [error, setError] = useState(null);
 
-    const[name, setName] = useState("Julia");
+    // const[name, setName] = useState("Julia");
 
 
 
@@ -35,27 +41,7 @@ const Home = () => {
 
     // -------------
 
-    useEffect(() => {
-        // Our get request and timeout effect of 1000
-        setTimeout(() => {
-            fetch('http://localhost:8000/blogs') 
-        // A promise with a response object
-            .then(res => {
-                return res.json();
-            })
-            .then(data => {
-                setBlogs(data)
-                setIsPending(false)
-            })
-        }, 1000)
-
-
-        // console.log('use effect ran')
-        // console.log(blogs);
-        console.log(name);
-    }, []
-    // [name]
-    );
+    
 
 
     // let name = 'Julia';
@@ -81,6 +67,11 @@ const Home = () => {
 
     return ( 
         <div className="home">
+
+            {/* Conditional rendering for error */}
+            { error && <div>{ error }</div> }
+
+
             {/* Working with Props */}
             {/* handleDelete is passed as a prop */}
             {/* <BlogList blogs={blogs} title="Our Blogs" handleDelete={handleDelete}/> */}

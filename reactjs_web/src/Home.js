@@ -80,9 +80,14 @@ const Home = () => {
             
             {/* Reusing React Components */}
             { isPending && <div>loading...</div>}
+
+            {/* To effect the change, this code is commented out (skip to #25)
             { blogs && <BlogList blogs={blogs.filter((blog) => blog.author === "mario")} title="Julia's Blogs" 
             // handleDelete={handleDelete} (For Now it is not needed)
-            />}
+            />} */}
+
+            {/* Route Param #25 */}
+            { blogs && <BlogList blogs={blogs} />}
 
 
 

@@ -197,6 +197,24 @@
         margin: 2rem 0 3rem;
     }
 
+    .about-content h2 {
+        font-size: 20px;
+    }
+    .about-content ul {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .about-content ul li {
+        padding: 3px;
+        list-style-type: none;
+        border-radius: 8px;
+        outline-style:solid;
+        border: #27AE60;
+        margin: 8px;
+        font-size: 18px;
+    }
+
     .services h2{
         margin-bottom: 5rem;
     }

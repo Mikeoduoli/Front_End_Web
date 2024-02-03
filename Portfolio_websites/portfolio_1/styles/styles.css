@@ -15,7 +15,7 @@
     --bg-color: #1f242d;
     --second-bg-color: #323946;
     --text-color: #fff;
-    --main-color: #0ef;
+    --main-color: #27AE60;
   }
 
   html {
@@ -170,6 +170,12 @@
 
     .about-img img {
         width: 35vw;
+    }
+
+    .about .about-img .sized-img {
+        border-radius: 50%;
+        height: 400px;
+        width: 400px;
     }
 
     .heading {

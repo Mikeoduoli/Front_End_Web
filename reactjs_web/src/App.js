@@ -4,6 +4,7 @@ import Home from './Home';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Create from './Create';
 import BlogDetails from './BlogDetails';
+import NotFound from './Error-404';
 
 function App() {
   // Dynamic values creation
@@ -32,6 +33,10 @@ function App() {
             {/* Lec #25 - Route Parameters */}
             <Route path="/blogs/:id">
               <BlogDetails />
+            </Route>
+            {/* The "*" means catch all the route */}
+            <Route path="*">
+              <NotFound />
             </Route>
 
           </Switch>

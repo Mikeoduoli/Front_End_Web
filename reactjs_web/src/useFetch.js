@@ -21,7 +21,7 @@ const useFetch = (url) => {
         // A promise with a response object
                 .then(res => {
                     if(!res.ok) {
-                        throw Error('Data not fetched for the resource');
+                        throw Error('Data not fetched for the resource.');
                     }
                     return res.json();
                 })

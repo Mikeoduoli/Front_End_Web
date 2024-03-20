@@ -215,6 +215,10 @@
         font-size: 18px;
     }
 
+    .about-content ul li .analysis-btn {
+        background-color: #27AE60;
+    }
+
     .services h2{
         margin-bottom: 5rem;
     }
@@ -261,14 +265,14 @@
     }
 
     .portfolio h2 {
-        margin-bottom: 4rem;
+        margin-bottom: 1rem;
     }
 
     .portfolio-container {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         align-items: center;
-        gap: 2.5rem;
+        gap: 2rem;
     }
 
     .portfolio-container .portfolio-box {
@@ -313,10 +317,10 @@
         font-size: 3rem;
     }
 
-    .portfolio-layer p {
+    /* .portfolio-layer p {
         font-size: 1.6rem;
         margin: .3rem 0 1rem;
-    }
+    } */
 
     .portfolio-layer a {
         display: inline-flex;

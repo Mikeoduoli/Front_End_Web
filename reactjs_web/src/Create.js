@@ -5,7 +5,7 @@ const Create = () => {
     // Creating a state to track changes inserted
     const [title, setTitle] = useState('');
     const [body, setBody] = useState('');
-    const [author, setAuthor] = useState('mario');
+    const [author, setAuthor] = useState('Mario');
     const [isPending, setIsPending] = useState(false); 
     // #30
     const history = useHistory();
@@ -58,8 +58,8 @@ const Create = () => {
                     value={author}
                     onChange={(e) => setAuthor(e.target.value)}
                     >
-                    <option value="mario">mario</option>
-                    <option value="yoshi">yoshi</option>
+                    <option value="Mario">Mario</option>
+                    <option value="Yoshi">Yoshi</option>
                 </select>
                 {!isPending && <button>Add Blog</button>}
                 {isPending && <button disabled>Adding Blog...</button>}

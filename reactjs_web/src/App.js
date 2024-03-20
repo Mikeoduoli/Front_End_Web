@@ -13,6 +13,7 @@ function App() {
     <Router>
       <div className="App">
         <Navbar />
+        {/* #5 Using dynamic value to output data (title is our dynamic value) */}
         <h1 className='title'>{title}</h1>
         <div className='content'>
           {/* #21 Deleted */}
@@ -30,7 +31,7 @@ function App() {
               <Create />
             </Route>
             
-            {/* Lec #25 - Route Parameters */}
+            {/* Lec #25 - Route Parameters(id) */}
             <Route path="/blogs/:id">
               <BlogDetails />
             </Route>

@@ -12,6 +12,6 @@ class Car {
     }
 }
 
-// after defining class build a car object
+// after defining class, build a car object
 
 const car1 = new Car("red", 120);

@@ -8,16 +8,19 @@
 <body>
     <form action="" method="post">
         <div>
-            
+            <label for="booking_date">Booking Date</label>
+            <input type="date" id="booking_date" name="booking_date">
         </div>
         <div>
-
+            <label for="booking_people">Number of People</label>
+            <input type="range" id="booking_people" name="booking_people" min="">
+            <output>4</output>
         </div>
         <div>
-
+            <input id="booking_location" name="booking_location" list="location">
         </div>
         <div>
-
+            <button type="submit">Book Table</button>
         </div>
     </form>
 </body>

@@ -13,11 +13,16 @@
         </div>
         <div>
             <label for="booking_people">Number of People</label>
-            <input type="range" id="booking_people" name="booking_people" min="">
+            <input type="range" id="booking_people" name="booking_people" min="1">
             <output>4</output>
         </div>
         <div>
-            <input id="booking_location" name="booking_location" list="location">
+            <label for="booking_location">Location</label>
+            <input id="booking_location" name="booking_location" list="locations">
+            <datalist id="locations">
+                <option value="Downtime"></option>
+                <option value="Uptime"></option>
+            </datalist>
         </div>
         <div>
             <button type="submit">Book Table</button>

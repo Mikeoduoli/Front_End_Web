@@ -6,14 +6,14 @@
 
 body{
     background-color: antiquewhite;
-    margin: 4rem;
+    margin: 1.5rem 4rem;
 }
 
 header img{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 1rem;
+    margin-top: -15px;
     margin-bottom: .5rem;
 }
 
@@ -21,36 +21,64 @@ nav ul{
     background-color: #7f8887;
     border-radius: 5px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     height: 50px;
 }
 
-nav ul li {
+nav ul li{
     list-style-type: none;
+    cursor: pointer;
+    a{
+        text-decoration: none;
+    }
 }
+
 
 main {
     margin-top: 20px;
 }
 
-main+section {
+#first-section {
+    background: url("img/italian-cuisine-banner.webp") no-repeat;
+    background-size: cover;
     border-radius: 5px;
     border: solid #7f8887;
-    padding: 50px;
+    padding: 90px;
     background-color: rgb(175, 228, 178);
     margin-top: 15px;
+    color: #ffffff;
+    p{
+        width: 75%;
+    }
 }
 
-section + h1 {
-    font-size: 40px;
+section h1 {
+    font-size: 50px;
+    /* padding-top: -40px; */
+    font-size: 30px;
 }
 
 .services {
     display: grid;
-    grid-template-rows: 4;
-    background-color: #2196F3;
+    grid-template-columns: 3;
+    grid-auto-flow: column;
+    /* background-color: #2196F3; */
     gap: 10px;
+    margin-top: 10px;
+}
+
+article {
+    border-radius: 5px;
+    border: solid #90c01f;
+    padding: 15px;
+    background-color: rgb(231, 179, 114);
+}
+
+article > image {
+    width: 140px;
+    height: 180px;
+    padding-bottom: 15px;
 }
 
 .card {
@@ -59,6 +87,35 @@ section + h1 {
     border-radius: 5px;
 }
 
+
+
+button {
+    /* margin-bottom: 10px; */
+    width: 120px;
+    height: 40px;
+    cursor: pointer;
+    /* margin-bottom: 15px; */
+    align-self: baseline;
+}
+
 footer {
     margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.copy {
+    /* background-color: blue; */
+    padding: 15px auto;
+    p {
+        text-align: right;
+        padding-top: 5px;
+    }
+}
+
+#horizontal-line {
+    width: 450px;
+    height: 2px;
+    background-color: #000;
 }

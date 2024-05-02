@@ -1,10 +1,15 @@
 function ModeToggler() {
-    const darkModeOn = true;
+    let darkModeOn = true;
     const darkMode = <div>Dark Mode is one.</div>
     const lightMode = <div>Light Mode is one.</div>
 
     const handleClick = () => {
         darkModeOn = !darkModeOn;
+        if (darkModeOn === true) {
+            console.log("Dark Mode is on!");
+        } else {
+            console.log("Light Mode is on");
+        }
     }
 
     return (

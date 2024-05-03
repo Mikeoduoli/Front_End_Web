@@ -1,10 +1,13 @@
 // import logo from './logo.svg';
 import './App.css';
-import ModeToggle from './ModeToggle';
+// import ModeToggle from './ModeToggle';
+import Child from './Child';
 
 function App() {
   return (
-    <ModeToggle />
+    <div>
+      <Child message= {date.toLocaleTimeString()}/>
+    </div>
   );
 }
 

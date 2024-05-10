@@ -1,0 +1,14 @@
+import React from 'react'
+import { useMealsListContext } from '../providers/MealsProvider';
+
+const Counter = () => {
+    const { meals } = useMealsListContext();
+
+  return (
+    <div>
+        <h3>Number of meals today: {meals.lengthg}</h3>  
+    </div>
+  )
+}
+
+export default Counter;

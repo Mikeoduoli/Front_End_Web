@@ -1,6 +1,14 @@
 // import logo from './logo.svg';
 import './App.css';
 import { useState } from "react";
+import data from "./data"
+
+// const topDesserts = data.map(desserts => {
+//   return {
+//     Content: `${desserts.title} - ${desserts.description}`,
+//     Price: desserts.Price
+//   }
+// });
 
 function App() {
   const [name, setName] = useState("");
@@ -24,6 +32,15 @@ function App() {
     setComment(""); //Reseting form values after submission
     setScore("10"); //Reseting form values after submission
   };
+
+  //Using map method to transform List
+
+  // console.log(data.topDesserts)
+
+  const listItems = data.map(dessert => {
+    const itemText = `${dessert.title} - ${dessert.price}`
+    return <li>{itemText}</li>
+  });
 
   return (
     <>
@@ -67,6 +84,13 @@ function App() {
         </fieldset>
       </form>
     </div>
+
+    <div>
+      <ul>
+        {listItems}
+      </ul>
+    </div>
+
     </>
   );
 }

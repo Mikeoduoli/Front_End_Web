@@ -2,6 +2,7 @@
 import './App.css';
 import { useState } from "react";
 import data from "./data"
+import Todo from './Todo';
 
 // const topDesserts = data.map(desserts => {
 //   return {
@@ -14,6 +15,20 @@ function App() {
   const [name, setName] = useState("");
   const [score, setScore] = useState("10");
   const [comment, setComment] = useState("");
+
+  const [todos, setTodos] = useState([{
+    id: 'todo1',
+    createdAt: '18:00'
+  },
+  {
+    id: 'todo2',
+    createdAt: '20:30',
+  }]);
+
+  const reverseOrder = () => {
+    //reverse is a mutative operation,create a new array first
+    setTodos([...todos].reverse());
+  }
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -33,6 +48,8 @@ function App() {
     setScore("10"); //Reseting form values after submission
   };
 
+
+
   //Using map method to transform List
 
   // console.log(data.topDesserts)
@@ -42,8 +59,19 @@ function App() {
     return <li>{itemText}</li>
   });
 
+
+  const handleSubmit1 = (e) => {
+    e.preventDefault();
+    setName("");
+    console.log("Form Submitted!")
+  }
+
   return (
     <>
+
+   {/* <Todo /> */}
+
+    
     <div className="App">
       <form onSubmit={handleSubmit}>
         <fieldset>
@@ -90,6 +118,40 @@ function App() {
         {listItems}
       </ul>
     </div>
+
+    
+
+    <div>
+      <button onClick={reverseOrder}>Reverse</button>
+      <table>
+        <tbody>
+          {todos.map((todo)=>(
+            <Todo key={todo.id} id={todo.id} createdAt={todo.createdAt} />
+          ))}
+        </tbody>
+      </table>
+    </div>
+
+
+    <form onSubmit={handleSubmit1}>
+      <fieldset>
+        <div className='Field'>
+          <label htmlFor='name'>Name:</label>
+          <input 
+            id='name'
+            type='text'
+            placeholder='Name'
+            name='name'
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            />
+        </div>
+        <button disabled={!name} type='submit'>
+          Submit
+        </button>
+      </fieldset>
+    </form>
+
 
     </>
   );

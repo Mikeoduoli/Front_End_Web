@@ -4,12 +4,12 @@ import { useState } from "react";
 import data from "./data"
 import Todo from './Todo';
 
-// const topDesserts = data.map(desserts => {
-//   return {
-//     Content: `${desserts.title} - ${desserts.description}`,
-//     Price: desserts.Price
-//   }
-// });
+const topDesserts = data.map(desserts => {
+  return {
+    Content: `${desserts.title} - ${desserts.description}`,
+    Price: desserts.Price
+  }
+});
 
 function App() {
   const [name, setName] = useState("");
@@ -52,7 +52,7 @@ function App() {
 
   //Using map method to transform List
 
-  // console.log(data.topDesserts)
+  console.log(data.topDesserts)
 
   const listItems = data.map(dessert => {
     const itemText = `${dessert.title} - ${dessert.price}`

@@ -1,0 +1,11 @@
+function randomFraction() {
+
+  // Only change code below this line
+  let randomNum = Math.random()
+
+  return randomNum;
+
+  // Only change code above this line
+}
+
+console.log(randomFraction())

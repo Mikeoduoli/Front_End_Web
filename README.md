@@ -8,4 +8,4 @@
  3. JavaScript
  4. Tailwind CSS
  5. React JS
- 6. NodeJs (Express JS)
+ 6. VueJS
